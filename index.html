@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css.map" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    
+    <style>
+      /* Make the image fully responsive */
+      .carousel-inner img {
+        width: 100%;
+        height: 80%;
+      }
+      </style>
+
+    <title>Hello, world!</title>
+  </head>
+  <body style="height:1500px">
+
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+      <a class="nav-link text-white" href="#">Logo</a>
+      <ul id="nav-mobile" class="navbar-nav ml-auto">
+        
+        
+          <div class="logged-out">
+          <button type="button" class="btn btn-light " data-toggle="modal" data-target="#modal-login" style ="color:blue">LogIn</style></button>
+        </div>
+       
+        &nbsp; &nbsp;
+        
+          <div class="logged-out">
+          <button type="button" class="btn btn-light "  data-toggle="modal" data-target="#modal-signup" style="color:blue">Signup</style></button>
+        </div>
+       
+        &nbsp; &nbsp;
+       
+         <div class="logged-in">
+          <button type="button" class="btn btn-light ml-2 " id="logout" style="color:blue">LogOut</style> </button> 
+        </div>
+        
+      
+      </ul>
+    </nav>
+    <div id="modal-login" class="modal mt-5 ">
+    
+        <div class="container" >
+            
+  
+        <div class="card w-50 mx-auto">
+          <div class="mb-4 mt-4">
+                
+            <h2 style="text-align:center">Login</h2>
+          </div>
+              <div class="mb-5  mx-5 mr-5  ">
+          <form id="login-form">
+            <div class="form-group">
+              <label for="login-email">Email address:</label>
+              <input type="email" class="form-control" id="login-email" placeholder="Enter email"  required autocomplete="off">
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" id="login-password" placeholder="Enter password"  required>
+              
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mt-3 " style="text-align:center">Submit</style></button>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light mx-auto mt-3 " data-dismiss="modal" ">Close</style></button>
+            </div>
+            </form>
+    </div>
+    </div>
+    </div>
+    </div>
+  
+
+    <div id="modal-signup" class="modal mt-5" >
+    
+      <div class="container" >
+          
+
+      <div class="card w-50 mx-auto">
+        <div class="mt-4 mb-4">
+              
+          <h2 style="text-align:center">Signup</h2>
+        </div>
+            <div class="mb-5 mt-2 mx-5 mr-5  ">
+        <form id="signup-form">
+          <div class="form-group">
+            <label for="signup-email">Email address:</label>
+            <input type="email" class="form-control" id="signup-email" placeholder="Enter email"  required autocomplete="off">
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="signup-password" placeholder="Choose password"  required>
+            
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 " style="text-align:center">Submit</style></button>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+          </form>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+    <section class="logged-out">
+    <div id="demo" class="carousel slide" data-ride="carousel mt-0">
+        <ul class="carousel-indicators">
+          <div data-target="#demo" data-slide-to="0" class="active"></div>
+          <div data-target="#demo" data-slide-to="1"></div>
+          <div data-target="#demo" data-slide-to="2"></div>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="la.jpg" alt="Los Angeles" width="1100" height="500">
+            <div class="carousel-caption">
+              <h3>You are unique don't forget your identity</h3>
+              <p>Sign up with us!!!</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="ny.jpg" alt="New York" width="1100" height="400">
+            <div class="carousel-caption">
+              <h3>PLAN YOUR DAY WITH US</h3>
+              <p>Follow your Passion!!!</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="im.jpg"  width="1100" height="500">
+            <div class="carousel-caption">
+              <h3>Become your own master with Us!!!</h3>
+            </div>   
+          </div>
+        </div>
+          <div class="carousel-item">
+            <img src="chicago.jpg" alt="Chicago" width="1100" height="500">
+            <div class="carousel-caption">
+              <h3>Never be Afraid Of Taking Risks</h3>
+              <p>Talk to our mentors</p>
+            </div>   
+          </div>
+         
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+
+    </section>
+
+    <div class="logged-in">
+<div class="col">
+  <div class="col-lg-4 col-md-4 col-12">
+    <div class="card ">
+    <h2 style="text-align: center;">Todo!!!</style></h2>
+      
+      <div class="card-header">
+         <ul class="draggablePanelList list-unstyled">
+        <li class="panel panel-info draggablePanelList">
+            <div class="panel-heading">
+              <div class="form-group">
+        
+              <form id ="addform">
+              <input type="text" class="form-control "  placeholder="Here you go!!!" name="todo" required>
+              <input type="text" class="form-control "  placeholder="Here you go!!!" name="deadline" required>
+              <button type="submit" class="btn btn-primary w-100 mt-2">Submit</button>
+            </form>
+          </ul>  
+            <ul id = "plan" class="list-unstyled "></ul>
+            </div>
+          </div>
+          
+    </div>
+  </div>
+</div>
+</div>
+
+  
+
+
+
+
+<div class="logged-in">
+<div class="col">
+  <div class="col-lg-4 col-md-4 col-12">
+    <div class="card ">
+    <h2 style="text-align: center;">Doing!!!</style></h2>
+      
+      <div class="card-header">
+         <ul class="draggablePanelList list-unstyled">
+        <li class="panel panel-info draggablePanelList">
+            <div class="panel-heading">
+              <div class="form-group">
+        
+              <form id ="addform1">
+              <input type="text" class="form-control "  placeholder="Write the task you are doing!!!" name="doing" required>
+              <input type="text" class="form-control "  placeholder="Deadline of your task!!!" name="deadline1" required>
+              <button type="submit" class="btn btn-primary w-100 mt-2">Submit</button>
+            </form>
+          </ul>  
+            <ul id = "plan1" class="list-unstyled "></ul>
+            </div>
+          </div>
+          
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+<div class="logged-in">
+<div class="col">
+  <div class="col-lg-4 col-md-4 col-12">
+    <div class="card ">
+    <h2 style="text-align: center;">Done!!!</style></h2>
+      
+      <div class="card-header">
+         <ul class="draggablePanelList list-unstyled">
+        <li class="panel panel-info draggablePanelList">
+            <div class="panel-heading">
+              <div class="form-group">
+        
+              <form id ="addform2">
+              <input type="text" class="form-control "  placeholder="Write the task you have done today!!!" name="done" required>
+              <input type="text" class="form-control "  placeholder="Time taken to complete your task!!!" name="deadline2" required>
+              <button type="submit" class="btn btn-primary w-100 mt-2">Submit</button>
+            </form>
+          </ul>  
+            <ul id = "plan2" class="list-unstyled "></ul>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+<div class="logged-in">
+  <button type="button" class="btn btn-primary btn-lg mt-5" data-toggle="modal" data-target="#option" style ="text-align:center ; width:100%">Click here to see your username</style></button>
+  <div class="modal" id="option">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+    
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="account-details">
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+<style>
+  .draggablePanelList.panel-heading {
+    cursor: move;
+}
+</style>
+
+
+
+<script>
+
+jQuery(function($) {
+        var panelList = $('.draggablePanelList');
+
+        panelList.sortable({
+            // Only make the .panel-heading child elements support dragging.
+            // Omit this to make then entire <li>...</li> draggable.
+            handle: '.panel-heading', 
+            update: function() {
+                $('.panel', panelList).each(function(index, elem) {
+                     var $listItem = $(elem),
+                         newIndex = $listItem.index();
+
+                     // Persist the new indices.
+                });
+            }
+        });
+    });
+</script>
+
+<div class="logged-in">
+  <div class="container-fluid mt-5">
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCRbsfEHV67mYY5HS3_4TAEi4I139WDI-E",
+        authDomain: "flipr-hackathon-ba0b3.firebaseapp.com",
+        databaseURL: "https://flipr-hackathon-ba0b3.firebaseio.com",
+        projectId: "flipr-hackathon-ba0b3",
+        storageBucket: "flipr-hackathon-ba0b3.appspot.com",
+        messagingSenderId: "107486038362",
+        appId: "1:107486038362:web:840aa6ae539154cbd84b63",
+        measurementId: "G-PPKFLPWNX4"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      //make auth and firestore references
+      const auth=firebase.auth();
+      const db=firebase.firestore();
+    </script>
+
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+  <script src="auth.js"></script>
+  <script src="index.js"></script>
+  </body>
+</html>
